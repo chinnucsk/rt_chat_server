@@ -1,0 +1,578 @@
+2013-05-13 23:07:39 =ERROR REPORT====
+GET /tweet/create [rt_chat_server] 404 0ms2013-05-13 23:07:41 =ERROR REPORT====
+GET / [rt_chat_server] 404 0ms2013-05-13 23:07:46 =ERROR REPORT====
+** Generic server <0.155.0> terminating 
+** Last message in was {route,"/message"}
+** When Server state == {state,rt_chat_server,["Elixir-RtChatServer-MessageController"],28695,32792,36889}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+2013-05-13 23:07:46 =CRASH REPORT====
+  crasher:
+    initial call: boss_router_controller:init/1
+    pid: <0.155.0>
+    registered_name: []
+    exception exit: {{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,747}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [<0.154.0>,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.154.0>]
+    dictionary: [{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 2584
+    stack_size: 24
+    reductions: 3753
+  neighbours:
+2013-05-13 23:07:46 =SUPERVISOR REPORT====
+     Supervisor: {<0.154.0>,boss_router_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+     Offender:   [{pid,<0.155.0>},{name,router_controller},{mfargs,{boss_router_controller,start_link,[[{application,rt_chat_server},{controllers,["Elixir-RtChatServer-MessageController"]}]]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2013-05-13 23:07:46 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_acceptor:init/3
+    pid: <0.147.0>
+    registered_name: []
+    exception exit: {{{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},{gen_server,call,[<0.155.0>,{route,"/message"}]}},[{gen_server,call,2,[{file,"gen_server.erl"},{line,180}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,540}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochiweb_http,headers,5,[{file,"src/mochiweb_http.erl"},{line,94}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [mochiweb_http,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.137.0>,#Port<0.13057>]
+    dictionary: [{boss_environment,development},{mochiweb_request_cookie,[{"_game_suggestions_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUwYjE5YTAxZTQ4Y2Q4YWRiNTUzODRhM2FmMzY2NTM1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWFqQm1oclhRTlpwbC9NYVhRZUgxTnJlSkowUEYrRC9DemNOeXJoZURrcjg9BjsARg%3D%3D--ff286aa75b7a891f6ac790fe4baa36df4bfc883e"},{"_sio","f4141394f6d76dec----"},{"mp_d034a0810374c044904d0e6bf1409f5f_mixpanel","%7B%22distinct_id%22%3A%20%2213d34f513df28d-0c93ccd29-651f2279-13c680-13d34f513e0758%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D"},{"gs_u","1700934395"},{"_info498b_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTExM2IxZjMzMGM1Yjc2ODMxNzlmYWUwMmJiMDNhMjkzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJtYWc5UlFwOUdyNDFDa1ZoL1VrcmI4MTd5VFc4a0R3US9LdXNEMHZTR0k9BjsARg%3D%3D--f7cdcaea10c63773acfd525550bf4be860bf90eb"},{"_ga","1.1.1635324997.1368314659"},{"_boss_session","56ef979d894d0ecfe379a138dabbafdee0329e66"}]}]
+    trap_exit: false
+    status: running
+    heap_size: 10946
+    stack_size: 24
+    reductions: 19565
+  neighbours:
+2013-05-13 23:07:46 =ERROR REPORT====
+** Generic server <0.174.0> terminating 
+** Last message in was {route,"/message"}
+** When Server state == {state,rt_chat_server,["Elixir-RtChatServer-MessageController"],49177,53272,57367}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+2013-05-13 23:07:46 =CRASH REPORT====
+  crasher:
+    initial call: boss_router_controller:init/1
+    pid: <0.174.0>
+    registered_name: []
+    exception exit: {{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,747}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [<0.154.0>,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.154.0>]
+    dictionary: [{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 2584
+    stack_size: 24
+    reductions: 2262
+  neighbours:
+2013-05-13 23:07:46 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_acceptor:init/3
+    pid: <0.146.0>
+    registered_name: []
+    exception exit: {{{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},{gen_server,call,[<0.174.0>,{route,"/message"}]}},[{gen_server,call,2,[{file,"gen_server.erl"},{line,180}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,540}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochiweb_http,headers,5,[{file,"src/mochiweb_http.erl"},{line,94}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [mochiweb_http,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.137.0>,#Port<0.13058>]
+    dictionary: [{boss_environment,development},{mochiweb_request_cookie,[{"_game_suggestions_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUwYjE5YTAxZTQ4Y2Q4YWRiNTUzODRhM2FmMzY2NTM1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWFqQm1oclhRTlpwbC9NYVhRZUgxTnJlSkowUEYrRC9DemNOeXJoZURrcjg9BjsARg%3D%3D--ff286aa75b7a891f6ac790fe4baa36df4bfc883e"},{"_sio","f4141394f6d76dec----"},{"mp_d034a0810374c044904d0e6bf1409f5f_mixpanel","%7B%22distinct_id%22%3A%20%2213d34f513df28d-0c93ccd29-651f2279-13c680-13d34f513e0758%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D"},{"gs_u","1700934395"},{"_info498b_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTExM2IxZjMzMGM1Yjc2ODMxNzlmYWUwMmJiMDNhMjkzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJtYWc5UlFwOUdyNDFDa1ZoL1VrcmI4MTd5VFc4a0R3US9LdXNEMHZTR0k9BjsARg%3D%3D--f7cdcaea10c63773acfd525550bf4be860bf90eb"},{"_ga","1.1.1635324997.1368314659"},{"_boss_session","56ef979d894d0ecfe379a138dabbafdee0329e66"}]}]
+    trap_exit: false
+    status: running
+    heap_size: 10946
+    stack_size: 24
+    reductions: 5600
+  neighbours:
+2013-05-13 23:07:46 =SUPERVISOR REPORT====
+     Supervisor: {<0.154.0>,boss_router_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+     Offender:   [{pid,<0.174.0>},{name,router_controller},{mfargs,{boss_router_controller,start_link,[[{application,rt_chat_server},{controllers,["Elixir-RtChatServer-MessageController"]}]]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2013-05-13 23:07:47 =ERROR REPORT====
+** Generic server <0.177.0> terminating 
+** Last message in was {route,"/message"}
+** When Server state == {state,rt_chat_server,["Elixir-RtChatServer-MessageController"],61463,65560,69657}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+2013-05-13 23:07:47 =CRASH REPORT====
+  crasher:
+    initial call: boss_router_controller:init/1
+    pid: <0.177.0>
+    registered_name: []
+    exception exit: {{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,747}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [<0.154.0>,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.154.0>]
+    dictionary: [{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 2584
+    stack_size: 24
+    reductions: 2262
+  neighbours:
+2013-05-13 23:07:47 =SUPERVISOR REPORT====
+     Supervisor: {<0.154.0>,boss_router_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+     Offender:   [{pid,<0.177.0>},{name,router_controller},{mfargs,{boss_router_controller,start_link,[[{application,rt_chat_server},{controllers,["Elixir-RtChatServer-MessageController"]}]]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2013-05-13 23:07:47 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_acceptor:init/3
+    pid: <0.169.0>
+    registered_name: []
+    exception exit: {{{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},{gen_server,call,[<0.177.0>,{route,"/message"}]}},[{gen_server,call,2,[{file,"gen_server.erl"},{line,180}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,540}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochiweb_http,headers,5,[{file,"src/mochiweb_http.erl"},{line,94}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [mochiweb_http,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.137.0>,#Port<0.13860>]
+    dictionary: [{boss_environment,development},{mochiweb_request_cookie,[{"_game_suggestions_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUwYjE5YTAxZTQ4Y2Q4YWRiNTUzODRhM2FmMzY2NTM1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWFqQm1oclhRTlpwbC9NYVhRZUgxTnJlSkowUEYrRC9DemNOeXJoZURrcjg9BjsARg%3D%3D--ff286aa75b7a891f6ac790fe4baa36df4bfc883e"},{"_sio","f4141394f6d76dec----"},{"mp_d034a0810374c044904d0e6bf1409f5f_mixpanel","%7B%22distinct_id%22%3A%20%2213d34f513df28d-0c93ccd29-651f2279-13c680-13d34f513e0758%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D"},{"gs_u","1700934395"},{"_info498b_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTExM2IxZjMzMGM1Yjc2ODMxNzlmYWUwMmJiMDNhMjkzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJtYWc5UlFwOUdyNDFDa1ZoL1VrcmI4MTd5VFc4a0R3US9LdXNEMHZTR0k9BjsARg%3D%3D--f7cdcaea10c63773acfd525550bf4be860bf90eb"},{"_ga","1.1.1635324997.1368314659"},{"_boss_session","56ef979d894d0ecfe379a138dabbafdee0329e66"}]}]
+    trap_exit: false
+    status: running
+    heap_size: 10946
+    stack_size: 24
+    reductions: 5352
+  neighbours:
+2013-05-13 23:07:47 =ERROR REPORT====
+** Generic server <0.182.0> terminating 
+** Last message in was {route,"/message"}
+** When Server state == {state,rt_chat_server,["Elixir-RtChatServer-MessageController"],73753,77848,81943}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+2013-05-13 23:07:47 =CRASH REPORT====
+  crasher:
+    initial call: boss_router_controller:init/1
+    pid: <0.182.0>
+    registered_name: []
+    exception exit: {{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,747}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [<0.154.0>,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.154.0>]
+    dictionary: [{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 2584
+    stack_size: 24
+    reductions: 2262
+  neighbours:
+2013-05-13 23:07:47 =SUPERVISOR REPORT====
+     Supervisor: {<0.154.0>,boss_router_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+     Offender:   [{pid,<0.182.0>},{name,router_controller},{mfargs,{boss_router_controller,start_link,[[{application,rt_chat_server},{controllers,["Elixir-RtChatServer-MessageController"]}]]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2013-05-13 23:07:47 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_acceptor:init/3
+    pid: <0.168.0>
+    registered_name: []
+    exception exit: {{{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},{gen_server,call,[<0.182.0>,{route,"/message"}]}},[{gen_server,call,2,[{file,"gen_server.erl"},{line,180}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,540}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochiweb_http,headers,5,[{file,"src/mochiweb_http.erl"},{line,94}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [mochiweb_http,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.137.0>,#Port<0.13861>]
+    dictionary: [{boss_environment,development},{mochiweb_request_cookie,[{"_game_suggestions_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUwYjE5YTAxZTQ4Y2Q4YWRiNTUzODRhM2FmMzY2NTM1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWFqQm1oclhRTlpwbC9NYVhRZUgxTnJlSkowUEYrRC9DemNOeXJoZURrcjg9BjsARg%3D%3D--ff286aa75b7a891f6ac790fe4baa36df4bfc883e"},{"_sio","f4141394f6d76dec----"},{"mp_d034a0810374c044904d0e6bf1409f5f_mixpanel","%7B%22distinct_id%22%3A%20%2213d34f513df28d-0c93ccd29-651f2279-13c680-13d34f513e0758%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D"},{"gs_u","1700934395"},{"_info498b_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTExM2IxZjMzMGM1Yjc2ODMxNzlmYWUwMmJiMDNhMjkzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJtYWc5UlFwOUdyNDFDa1ZoL1VrcmI4MTd5VFc4a0R3US9LdXNEMHZTR0k9BjsARg%3D%3D--f7cdcaea10c63773acfd525550bf4be860bf90eb"},{"_ga","1.1.1635324997.1368314659"},{"_boss_session","56ef979d894d0ecfe379a138dabbafdee0329e66"}]}]
+    trap_exit: false
+    status: running
+    heap_size: 10946
+    stack_size: 24
+    reductions: 5352
+  neighbours:
+2013-05-13 23:08:05 =ERROR REPORT====
+** Generic server <0.186.0> terminating 
+** Last message in was {route,"/message"}
+** When Server state == {state,rt_chat_server,["Elixir-RtChatServer-MessageController"],86039,90136,94233}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+2013-05-13 23:08:05 =CRASH REPORT====
+  crasher:
+    initial call: boss_router_controller:init/1
+    pid: <0.186.0>
+    registered_name: []
+    exception exit: {{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,747}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [<0.154.0>,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.154.0>]
+    dictionary: [{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 2584
+    stack_size: 24
+    reductions: 2262
+  neighbours:
+2013-05-13 23:08:05 =SUPERVISOR REPORT====
+     Supervisor: {<0.154.0>,boss_router_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+     Offender:   [{pid,<0.186.0>},{name,router_controller},{mfargs,{boss_router_controller,start_link,[[{application,rt_chat_server},{controllers,["Elixir-RtChatServer-MessageController"]}]]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2013-05-13 23:08:05 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_acceptor:init/3
+    pid: <0.184.0>
+    registered_name: []
+    exception exit: {{{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},{gen_server,call,[<0.186.0>,{route,"/message"}]}},[{gen_server,call,2,[{file,"gen_server.erl"},{line,180}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,540}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochiweb_http,headers,5,[{file,"src/mochiweb_http.erl"},{line,94}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [mochiweb_http,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.137.0>,#Port<0.14162>]
+    dictionary: [{boss_environment,development},{mochiweb_request_cookie,[{"_game_suggestions_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUwYjE5YTAxZTQ4Y2Q4YWRiNTUzODRhM2FmMzY2NTM1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWFqQm1oclhRTlpwbC9NYVhRZUgxTnJlSkowUEYrRC9DemNOeXJoZURrcjg9BjsARg%3D%3D--ff286aa75b7a891f6ac790fe4baa36df4bfc883e"},{"_sio","f4141394f6d76dec----"},{"mp_d034a0810374c044904d0e6bf1409f5f_mixpanel","%7B%22distinct_id%22%3A%20%2213d34f513df28d-0c93ccd29-651f2279-13c680-13d34f513e0758%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D"},{"gs_u","1700934395"},{"_info498b_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTExM2IxZjMzMGM1Yjc2ODMxNzlmYWUwMmJiMDNhMjkzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJtYWc5UlFwOUdyNDFDa1ZoL1VrcmI4MTd5VFc4a0R3US9LdXNEMHZTR0k9BjsARg%3D%3D--f7cdcaea10c63773acfd525550bf4be860bf90eb"},{"_ga","1.1.1635324997.1368314659"},{"_boss_session","56ef979d894d0ecfe379a138dabbafdee0329e66"}]}]
+    trap_exit: false
+    status: running
+    heap_size: 10946
+    stack_size: 24
+    reductions: 5777
+  neighbours:
+2013-05-13 23:08:06 =ERROR REPORT====
+** Generic server <0.191.0> terminating 
+** Last message in was {route,"/message"}
+** When Server state == {state,rt_chat_server,["Elixir-RtChatServer-MessageController"],98329,102424,106519}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+2013-05-13 23:08:06 =CRASH REPORT====
+  crasher:
+    initial call: boss_router_controller:init/1
+    pid: <0.191.0>
+    registered_name: []
+    exception exit: {{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,747}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [<0.154.0>,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.154.0>]
+    dictionary: [{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 2584
+    stack_size: 24
+    reductions: 2262
+  neighbours:
+2013-05-13 23:08:06 =SUPERVISOR REPORT====
+     Supervisor: {<0.154.0>,boss_router_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+     Offender:   [{pid,<0.191.0>},{name,router_controller},{mfargs,{boss_router_controller,start_link,[[{application,rt_chat_server},{controllers,["Elixir-RtChatServer-MessageController"]}]]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2013-05-13 23:08:06 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_acceptor:init/3
+    pid: <0.148.0>
+    registered_name: []
+    exception exit: {{{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},{gen_server,call,[<0.191.0>,{route,"/message"}]}},[{gen_server,call,2,[{file,"gen_server.erl"},{line,180}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,540}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochiweb_http,headers,5,[{file,"src/mochiweb_http.erl"},{line,94}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [mochiweb_http,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.137.0>,#Port<0.14163>]
+    dictionary: [{boss_environment,development},{mochiweb_request_cookie,[{"_game_suggestions_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUwYjE5YTAxZTQ4Y2Q4YWRiNTUzODRhM2FmMzY2NTM1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWFqQm1oclhRTlpwbC9NYVhRZUgxTnJlSkowUEYrRC9DemNOeXJoZURrcjg9BjsARg%3D%3D--ff286aa75b7a891f6ac790fe4baa36df4bfc883e"},{"_sio","f4141394f6d76dec----"},{"mp_d034a0810374c044904d0e6bf1409f5f_mixpanel","%7B%22distinct_id%22%3A%20%2213d34f513df28d-0c93ccd29-651f2279-13c680-13d34f513e0758%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D"},{"gs_u","1700934395"},{"_info498b_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTExM2IxZjMzMGM1Yjc2ODMxNzlmYWUwMmJiMDNhMjkzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJtYWc5UlFwOUdyNDFDa1ZoL1VrcmI4MTd5VFc4a0R3US9LdXNEMHZTR0k9BjsARg%3D%3D--f7cdcaea10c63773acfd525550bf4be860bf90eb"},{"_ga","1.1.1635324997.1368314659"},{"_boss_session","56ef979d894d0ecfe379a138dabbafdee0329e66"}]}]
+    trap_exit: false
+    status: running
+    heap_size: 10946
+    stack_size: 24
+    reductions: 6219
+  neighbours:
+2013-05-13 23:08:14 =ERROR REPORT====
+** Generic server <0.195.0> terminating 
+** Last message in was {route,"/message"}
+** When Server state == {state,rt_chat_server,["Elixir-RtChatServer-MessageController"],110615,114712,118809}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+2013-05-13 23:08:14 =CRASH REPORT====
+  crasher:
+    initial call: boss_router_controller:init/1
+    pid: <0.195.0>
+    registered_name: []
+    exception exit: {{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,747}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [<0.154.0>,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.154.0>]
+    dictionary: [{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 2584
+    stack_size: 24
+    reductions: 2262
+  neighbours:
+2013-05-13 23:08:14 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_acceptor:init/3
+    pid: <0.149.0>
+    registered_name: []
+    exception exit: {{{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},{gen_server,call,[<0.195.0>,{route,"/message"}]}},[{gen_server,call,2,[{file,"gen_server.erl"},{line,180}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,540}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochiweb_http,headers,5,[{file,"src/mochiweb_http.erl"},{line,94}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [mochiweb_http,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.137.0>,#Port<0.14317>]
+    dictionary: [{boss_environment,development},{mochiweb_request_cookie,[{"_game_suggestions_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUwYjE5YTAxZTQ4Y2Q4YWRiNTUzODRhM2FmMzY2NTM1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWFqQm1oclhRTlpwbC9NYVhRZUgxTnJlSkowUEYrRC9DemNOeXJoZURrcjg9BjsARg%3D%3D--ff286aa75b7a891f6ac790fe4baa36df4bfc883e"},{"_sio","f4141394f6d76dec----"},{"mp_d034a0810374c044904d0e6bf1409f5f_mixpanel","%7B%22distinct_id%22%3A%20%2213d34f513df28d-0c93ccd29-651f2279-13c680-13d34f513e0758%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D"},{"gs_u","1700934395"},{"_info498b_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTExM2IxZjMzMGM1Yjc2ODMxNzlmYWUwMmJiMDNhMjkzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJtYWc5UlFwOUdyNDFDa1ZoL1VrcmI4MTd5VFc4a0R3US9LdXNEMHZTR0k9BjsARg%3D%3D--f7cdcaea10c63773acfd525550bf4be860bf90eb"},{"_ga","1.1.1635324997.1368314659"},{"_boss_session","56ef979d894d0ecfe379a138dabbafdee0329e66"}]}]
+    trap_exit: false
+    status: running
+    heap_size: 10946
+    stack_size: 24
+    reductions: 6219
+  neighbours:
+2013-05-13 23:08:14 =SUPERVISOR REPORT====
+     Supervisor: {<0.154.0>,boss_router_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+     Offender:   [{pid,<0.195.0>},{name,router_controller},{mfargs,{boss_router_controller,start_link,[[{application,rt_chat_server},{controllers,["Elixir-RtChatServer-MessageController"]}]]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2013-05-13 23:08:14 =ERROR REPORT====
+** Generic server <0.199.0> terminating 
+** Last message in was {route,"/message"}
+** When Server state == {state,rt_chat_server,["Elixir-RtChatServer-MessageController"],122905,127000,131095}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+2013-05-13 23:08:14 =CRASH REPORT====
+  crasher:
+    initial call: boss_router_controller:init/1
+    pid: <0.199.0>
+    registered_name: []
+    exception exit: {{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,747}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [<0.154.0>,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.154.0>]
+    dictionary: [{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 2584
+    stack_size: 24
+    reductions: 2262
+  neighbours:
+2013-05-13 23:08:14 =SUPERVISOR REPORT====
+     Supervisor: {<0.154.0>,boss_router_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+     Offender:   [{pid,<0.199.0>},{name,router_controller},{mfargs,{boss_router_controller,start_link,[[{application,rt_chat_server},{controllers,["Elixir-RtChatServer-MessageController"]}]]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2013-05-13 23:08:14 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_acceptor:init/3
+    pid: <0.193.0>
+    registered_name: []
+    exception exit: {{{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},{gen_server,call,[<0.199.0>,{route,"/message"}]}},[{gen_server,call,2,[{file,"gen_server.erl"},{line,180}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,540}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochiweb_http,headers,5,[{file,"src/mochiweb_http.erl"},{line,94}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [mochiweb_http,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.137.0>,#Port<0.14471>]
+    dictionary: [{boss_environment,development},{mochiweb_request_cookie,[{"_game_suggestions_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUwYjE5YTAxZTQ4Y2Q4YWRiNTUzODRhM2FmMzY2NTM1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWFqQm1oclhRTlpwbC9NYVhRZUgxTnJlSkowUEYrRC9DemNOeXJoZURrcjg9BjsARg%3D%3D--ff286aa75b7a891f6ac790fe4baa36df4bfc883e"},{"_sio","f4141394f6d76dec----"},{"mp_d034a0810374c044904d0e6bf1409f5f_mixpanel","%7B%22distinct_id%22%3A%20%2213d34f513df28d-0c93ccd29-651f2279-13c680-13d34f513e0758%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D"},{"gs_u","1700934395"},{"_info498b_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTExM2IxZjMzMGM1Yjc2ODMxNzlmYWUwMmJiMDNhMjkzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJtYWc5UlFwOUdyNDFDa1ZoL1VrcmI4MTd5VFc4a0R3US9LdXNEMHZTR0k9BjsARg%3D%3D--f7cdcaea10c63773acfd525550bf4be860bf90eb"},{"_ga","1.1.1635324997.1368314659"},{"_boss_session","56ef979d894d0ecfe379a138dabbafdee0329e66"}]}]
+    trap_exit: false
+    status: running
+    heap_size: 10946
+    stack_size: 24
+    reductions: 5352
+  neighbours:
+2013-05-13 23:08:14 =ERROR REPORT====
+** Generic server <0.203.0> terminating 
+** Last message in was {route,"/message"}
+** When Server state == {state,rt_chat_server,["Elixir-RtChatServer-MessageController"],135191,139288,143385}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+2013-05-13 23:08:14 =CRASH REPORT====
+  crasher:
+    initial call: boss_router_controller:init/1
+    pid: <0.203.0>
+    registered_name: []
+    exception exit: {{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,747}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [<0.154.0>,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.154.0>]
+    dictionary: [{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 2584
+    stack_size: 24
+    reductions: 2262
+  neighbours:
+2013-05-13 23:08:14 =SUPERVISOR REPORT====
+     Supervisor: {<0.154.0>,boss_router_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+     Offender:   [{pid,<0.203.0>},{name,router_controller},{mfargs,{boss_router_controller,start_link,[[{application,rt_chat_server},{controllers,["Elixir-RtChatServer-MessageController"]}]]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2013-05-13 23:08:14 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_acceptor:init/3
+    pid: <0.150.0>
+    registered_name: []
+    exception exit: {{{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},{gen_server,call,[<0.203.0>,{route,"/message"}]}},[{gen_server,call,2,[{file,"gen_server.erl"},{line,180}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,540}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochiweb_http,headers,5,[{file,"src/mochiweb_http.erl"},{line,94}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [mochiweb_http,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.137.0>,#Port<0.14622>]
+    dictionary: [{boss_environment,development},{mochiweb_request_cookie,[{"_game_suggestions_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUwYjE5YTAxZTQ4Y2Q4YWRiNTUzODRhM2FmMzY2NTM1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWFqQm1oclhRTlpwbC9NYVhRZUgxTnJlSkowUEYrRC9DemNOeXJoZURrcjg9BjsARg%3D%3D--ff286aa75b7a891f6ac790fe4baa36df4bfc883e"},{"_sio","f4141394f6d76dec----"},{"mp_d034a0810374c044904d0e6bf1409f5f_mixpanel","%7B%22distinct_id%22%3A%20%2213d34f513df28d-0c93ccd29-651f2279-13c680-13d34f513e0758%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D"},{"gs_u","1700934395"},{"_info498b_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTExM2IxZjMzMGM1Yjc2ODMxNzlmYWUwMmJiMDNhMjkzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJtYWc5UlFwOUdyNDFDa1ZoL1VrcmI4MTd5VFc4a0R3US9LdXNEMHZTR0k9BjsARg%3D%3D--f7cdcaea10c63773acfd525550bf4be860bf90eb"},{"_ga","1.1.1635324997.1368314659"},{"_boss_session","56ef979d894d0ecfe379a138dabbafdee0329e66"}]}]
+    trap_exit: false
+    status: running
+    heap_size: 10946
+    stack_size: 24
+    reductions: 6066
+  neighbours:
+2013-05-13 23:08:21 =ERROR REPORT====
+** Generic server <0.207.0> terminating 
+** Last message in was {route,"/message"}
+** When Server state == {state,rt_chat_server,["Elixir-RtChatServer-MessageController"],147481,151576,155671}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+2013-05-13 23:08:21 =CRASH REPORT====
+  crasher:
+    initial call: boss_router_controller:init/1
+    pid: <0.207.0>
+    registered_name: []
+    exception exit: {{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,747}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [<0.154.0>,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.154.0>]
+    dictionary: [{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 2584
+    stack_size: 24
+    reductions: 2262
+  neighbours:
+2013-05-13 23:08:21 =SUPERVISOR REPORT====
+     Supervisor: {<0.154.0>,boss_router_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+     Offender:   [{pid,<0.207.0>},{name,router_controller},{mfargs,{boss_router_controller,start_link,[[{application,rt_chat_server},{controllers,["Elixir-RtChatServer-MessageController"]}]]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2013-05-13 23:08:21 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_acceptor:init/3
+    pid: <0.151.0>
+    registered_name: []
+    exception exit: {{{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},{gen_server,call,[<0.207.0>,{route,"/message"}]}},[{gen_server,call,2,[{file,"gen_server.erl"},{line,180}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,540}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochiweb_http,headers,5,[{file,"src/mochiweb_http.erl"},{line,94}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [mochiweb_http,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.137.0>,#Port<0.14773>]
+    dictionary: [{boss_environment,development},{mochiweb_request_cookie,[{"_game_suggestions_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUwYjE5YTAxZTQ4Y2Q4YWRiNTUzODRhM2FmMzY2NTM1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWFqQm1oclhRTlpwbC9NYVhRZUgxTnJlSkowUEYrRC9DemNOeXJoZURrcjg9BjsARg%3D%3D--ff286aa75b7a891f6ac790fe4baa36df4bfc883e"},{"_sio","f4141394f6d76dec----"},{"mp_d034a0810374c044904d0e6bf1409f5f_mixpanel","%7B%22distinct_id%22%3A%20%2213d34f513df28d-0c93ccd29-651f2279-13c680-13d34f513e0758%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D"},{"gs_u","1700934395"},{"_info498b_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTExM2IxZjMzMGM1Yjc2ODMxNzlmYWUwMmJiMDNhMjkzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJtYWc5UlFwOUdyNDFDa1ZoL1VrcmI4MTd5VFc4a0R3US9LdXNEMHZTR0k9BjsARg%3D%3D--f7cdcaea10c63773acfd525550bf4be860bf90eb"},{"_ga","1.1.1635324997.1368314659"},{"_boss_session","56ef979d894d0ecfe379a138dabbafdee0329e66"}]}]
+    trap_exit: false
+    status: running
+    heap_size: 10946
+    stack_size: 24
+    reductions: 6108
+  neighbours:
+2013-05-13 23:08:47 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 52ms2013-05-13 23:08:48 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 53ms2013-05-13 23:08:58 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 56ms2013-05-13 23:08:59 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 54ms2013-05-13 23:09:00 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 52ms2013-05-13 23:09:01 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 58ms2013-05-13 23:09:01 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 62ms2013-05-13 23:09:01 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 60ms2013-05-13 23:09:24 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 54ms2013-05-13 23:09:25 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 52ms2013-05-13 23:09:25 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 59ms2013-05-13 23:13:15 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 56ms2013-05-13 23:13:16 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 54ms2013-05-13 23:13:17 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 53ms2013-05-13 23:13:19 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 54ms2013-05-13 23:13:33 =ERROR REPORT====
+{{'Elixir-CompileError','__exception__',<<"/Users/codystebbins/Google Drive/code/rt_chat_server/src/controller/message_controller.ex">>,5,<<"function message/0 undefined">>},[]}2013-05-13 23:13:33 =ERROR REPORT====
+GET /message/index [rt_chat_server] 500 34ms2013-05-13 23:17:45 =ERROR REPORT====
+** Generic server <0.211.0> terminating 
+** Last message in was {route,"/message"}
+** When Server state == {state,rt_chat_server,["Elixir-RtChatServer-MessageController"],159767,163864,167961}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+2013-05-13 23:17:45 =CRASH REPORT====
+  crasher:
+    initial call: boss_router_controller:init/1
+    pid: <0.211.0>
+    registered_name: []
+    exception exit: {{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,747}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [<0.154.0>,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.154.0>]
+    dictionary: [{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 2584
+    stack_size: 24
+    reductions: 15965
+  neighbours:
+2013-05-13 23:17:45 =SUPERVISOR REPORT====
+     Supervisor: {<0.154.0>,boss_router_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+     Offender:   [{pid,<0.211.0>},{name,router_controller},{mfargs,{boss_router_controller,start_link,[[{application,rt_chat_server},{controllers,["Elixir-RtChatServer-MessageController"]}]]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2013-05-13 23:17:45 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_acceptor:init/3
+    pid: <0.188.0>
+    registered_name: []
+    exception exit: {{{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},{gen_server,call,[<0.211.0>,{route,"/message"}]}},[{gen_server,call,2,[{file,"gen_server.erl"},{line,180}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,540}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochiweb_http,headers,5,[{file,"src/mochiweb_http.erl"},{line,94}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [mochiweb_http,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [#Port<0.15074>,<0.137.0>]
+    dictionary: [{random_seed,{29759,2405,951}},{boss_environment,development},{mochiweb_request_cookie,[{"_game_suggestions_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUwYjE5YTAxZTQ4Y2Q4YWRiNTUzODRhM2FmMzY2NTM1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWFqQm1oclhRTlpwbC9NYVhRZUgxTnJlSkowUEYrRC9DemNOeXJoZURrcjg9BjsARg%3D%3D--ff286aa75b7a891f6ac790fe4baa36df4bfc883e"},{"_sio","f4141394f6d76dec----"},{"mp_d034a0810374c044904d0e6bf1409f5f_mixpanel","%7B%22distinct_id%22%3A%20%2213d34f513df28d-0c93ccd29-651f2279-13c680-13d34f513e0758%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D"},{"gs_u","1700934395"},{"_info498b_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTExM2IxZjMzMGM1Yjc2ODMxNzlmYWUwMmJiMDNhMjkzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJtYWc5UlFwOUdyNDFDa1ZoL1VrcmI4MTd5VFc4a0R3US9LdXNEMHZTR0k9BjsARg%3D%3D--f7cdcaea10c63773acfd525550bf4be860bf90eb"},{"_ga","1.1.1635324997.1368314659"},{"_boss_session","56ef979d894d0ecfe379a138dabbafdee0329e66"}]},{elixir_compiled,undefined}]
+    trap_exit: false
+    status: running
+    heap_size: 10946
+    stack_size: 24
+    reductions: 4479454
+  neighbours:
+2013-05-13 23:17:45 =ERROR REPORT====
+** Generic server <0.422.0> terminating 
+** Last message in was {route,"/message"}
+** When Server state == {state,rt_chat_server,["Elixir-RtChatServer-MessageController"],299033,303128,307223}
+** Reason for termination == 
+** {'module could not be loaded',[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+2013-05-13 23:17:45 =CRASH REPORT====
+  crasher:
+    initial call: boss_router_controller:init/1
+    pid: <0.422.0>
+    registered_name: []
+    exception exit: {{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,747}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [<0.154.0>,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.154.0>]
+    dictionary: [{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 2584
+    stack_size: 24
+    reductions: 2262
+  neighbours:
+2013-05-13 23:17:45 =SUPERVISOR REPORT====
+     Supervisor: {<0.154.0>,boss_router_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+     Offender:   [{pid,<0.422.0>},{name,router_controller},{mfargs,{boss_router_controller,start_link,[[{application,rt_chat_server},{controllers,["Elixir-RtChatServer-MessageController"]}]]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2013-05-13 23:17:45 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_acceptor:init/3
+    pid: <0.214.0>
+    registered_name: []
+    exception exit: {{{undef,[{'Elixir-RtChatServer-MessageController',module_info,[attributes],[]},{boss_router_controller,default_action,2,[{file,"src/boss/boss_router_controller.erl"},{line,176}]},{boss_router_controller,handle_call,3,[{file,"src/boss/boss_router_controller.erl"},{line,68}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,588}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]},{gen_server,call,[<0.422.0>,{route,"/message"}]}},[{gen_server,call,2,[{file,"gen_server.erl"},{line,180}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,540}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochiweb_http,headers,5,[{file,"src/mochiweb_http.erl"},{line,94}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [mochiweb_http,boss_web,boss_sup,<0.63.0>]
+    messages: []
+    links: [<0.137.0>,#Port<0.18086>]
+    dictionary: [{boss_environment,development},{mochiweb_request_cookie,[{"_game_suggestions_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUwYjE5YTAxZTQ4Y2Q4YWRiNTUzODRhM2FmMzY2NTM1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWFqQm1oclhRTlpwbC9NYVhRZUgxTnJlSkowUEYrRC9DemNOeXJoZURrcjg9BjsARg%3D%3D--ff286aa75b7a891f6ac790fe4baa36df4bfc883e"},{"_sio","f4141394f6d76dec----"},{"mp_d034a0810374c044904d0e6bf1409f5f_mixpanel","%7B%22distinct_id%22%3A%20%2213d34f513df28d-0c93ccd29-651f2279-13c680-13d34f513e0758%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D"},{"gs_u","1700934395"},{"_info498b_session","BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTExM2IxZjMzMGM1Yjc2ODMxNzlmYWUwMmJiMDNhMjkzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJtYWc5UlFwOUdyNDFDa1ZoL1VrcmI4MTd5VFc4a0R3US9LdXNEMHZTR0k9BjsARg%3D%3D--f7cdcaea10c63773acfd525550bf4be860bf90eb"},{"_ga","1.1.1635324997.1368314659"},{"_boss_session","56ef979d894d0ecfe379a138dabbafdee0329e66"}]}]
+    trap_exit: false
+    status: running
+    heap_size: 10946
+    stack_size: 24
+    reductions: 8732
+  neighbours:
+2013-05-13 23:17:48 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 54ms2013-05-13 23:19:48 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 52ms2013-05-13 23:21:46 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 0ms2013-05-13 23:21:47 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 0ms2013-05-13 23:21:49 =ERROR REPORT====
+GET /message [rt_chat_server] 404 0ms2013-05-13 23:22:00 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 0ms2013-05-13 23:22:15 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 0ms2013-05-13 23:22:15 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 0ms2013-05-13 23:22:23 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 2ms2013-05-13 23:22:24 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 0ms2013-05-13 23:22:24 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 0ms2013-05-13 23:22:26 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 0ms2013-05-13 23:22:27 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 0ms2013-05-13 23:22:43 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 30ms2013-05-13 23:22:44 =ERROR REPORT====
+GET /message/index [rt_chat_server] 404 29ms2013-05-13 23:22:58 =ERROR REPORT====
+GET /message/hello [rt_chat_server] 404 27ms2013-05-13 23:28:07 =ERROR REPORT====
+GET /create [rt_chat_server] 404 0ms2013-05-13 23:49:14 =ERROR REPORT====
+GET /create [rt_chat_server] 404 3ms2013-05-13 23:50:20 =ERROR REPORT====
+{function_clause,[{rt_chat_server_message_controller,index,['OPTIONS',[],{rt_chat_server_message_controller,{simple_bridge_request_wrapper,mochiweb_request_bridge,{mochicow_request,#Port<0.16142>,'OPTIONS',"/message",{1,1},{13,{"host",{"host","localhost:8001"},{"connection",{"connection","keep-alive"},{"cache-control",{"cache-control","max-age=0"},{"access-control-request-method",{"access-control-request-method","GET"},{"access-control-request-headers",{"access-control-request-headers","accept, origin, x-requested-with"},{"accept",{"accept","*/*"},nil,{"accept-encoding",{"accept-encoding","gzip,deflate,sdch"},{"accept-charset",{"accept-charset","UTF-8,*;q=0.5"},nil,nil},{"accept-language",{"accept-language","en-US,en;q=0.8"},nil,nil}}},nil},nil},nil},nil},{"pragma",{"pragma","no-cache"},{"origin",{"origin","http://localhost:9000"},nil,nil},{"user-agent",{"user-agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31"},{"referer",{"referer","http://localhost:9000/"},nil,nil},nil}}}},<<>>},false,[],[],none}}],[{file,"/Users/codystebbins/Google Drive/code/rt_chat_server/src/controller/rt_chat_server_message_controller.erl"},{line,4}]},{boss_web_controller,execute_action,5,[{file,"src/boss/boss_web_controller.erl"},{line,836}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,543}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochicow_upgrade,upgrade,4,[{file,"src/mochicow_upgrade.erl"},{line,72}]},{cowboy_protocol,execute,4,[{file,"src/cowboy_protocol.erl"},{line,514}]}]}2013-05-13 23:50:20 =ERROR REPORT====
+OPTIONS /message [rt_chat_server] 500 51ms2013-05-13 23:50:24 =ERROR REPORT====
+{function_clause,[{rt_chat_server_message_controller,index,['OPTIONS',[],{rt_chat_server_message_controller,{simple_bridge_request_wrapper,mochiweb_request_bridge,{mochicow_request,#Port<0.16142>,'OPTIONS',"/message",{1,1},{13,{"host",{"host","localhost:8001"},{"connection",{"connection","keep-alive"},{"cache-control",{"cache-control","max-age=0"},{"access-control-request-method",{"access-control-request-method","GET"},{"access-control-request-headers",{"access-control-request-headers","accept, origin, x-requested-with"},{"accept",{"accept","*/*"},nil,{"accept-encoding",{"accept-encoding","gzip,deflate,sdch"},{"accept-charset",{"accept-charset","UTF-8,*;q=0.5"},nil,nil},{"accept-language",{"accept-language","en-US,en;q=0.8"},nil,nil}}},nil},nil},nil},nil},{"pragma",{"pragma","no-cache"},{"origin",{"origin","http://localhost:9000"},nil,nil},{"user-agent",{"user-agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31"},{"referer",{"referer","http://localhost:9000/"},nil,nil},nil}}}},<<>>},false,[],[],none}}],[{file,"/Users/codystebbins/Google Drive/code/rt_chat_server/src/controller/rt_chat_server_message_controller.erl"},{line,4}]},{boss_web_controller,execute_action,5,[{file,"src/boss/boss_web_controller.erl"},{line,836}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,543}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochicow_upgrade,upgrade,4,[{file,"src/mochicow_upgrade.erl"},{line,72}]},{cowboy_protocol,execute,4,[{file,"src/cowboy_protocol.erl"},{line,514}]}]}2013-05-13 23:50:24 =ERROR REPORT====
+OPTIONS /message [rt_chat_server] 500 32ms2013-05-13 23:50:25 =ERROR REPORT====
+{function_clause,[{rt_chat_server_message_controller,index,['OPTIONS',[],{rt_chat_server_message_controller,{simple_bridge_request_wrapper,mochiweb_request_bridge,{mochicow_request,#Port<0.16142>,'OPTIONS',"/message",{1,1},{13,{"host",{"host","localhost:8001"},{"connection",{"connection","keep-alive"},{"cache-control",{"cache-control","max-age=0"},{"access-control-request-method",{"access-control-request-method","GET"},{"access-control-request-headers",{"access-control-request-headers","accept, origin, x-requested-with"},{"accept",{"accept","*/*"},nil,{"accept-encoding",{"accept-encoding","gzip,deflate,sdch"},{"accept-charset",{"accept-charset","UTF-8,*;q=0.5"},nil,nil},{"accept-language",{"accept-language","en-US,en;q=0.8"},nil,nil}}},nil},nil},nil},nil},{"pragma",{"pragma","no-cache"},{"origin",{"origin","http://localhost:9000"},nil,nil},{"user-agent",{"user-agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31"},{"referer",{"referer","http://localhost:9000/"},nil,nil},nil}}}},<<>>},false,[],[],none}}],[{file,"/Users/codystebbins/Google Drive/code/rt_chat_server/src/controller/rt_chat_server_message_controller.erl"},{line,4}]},{boss_web_controller,execute_action,5,[{file,"src/boss/boss_web_controller.erl"},{line,836}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,543}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochicow_upgrade,upgrade,4,[{file,"src/mochicow_upgrade.erl"},{line,72}]},{cowboy_protocol,execute,4,[{file,"src/cowboy_protocol.erl"},{line,514}]}]}2013-05-13 23:50:25 =ERROR REPORT====
+OPTIONS /message [rt_chat_server] 500 38ms2013-05-13 23:50:26 =ERROR REPORT====
+{function_clause,[{rt_chat_server_message_controller,index,['OPTIONS',[],{rt_chat_server_message_controller,{simple_bridge_request_wrapper,mochiweb_request_bridge,{mochicow_request,#Port<0.16142>,'OPTIONS',"/message",{1,1},{13,{"host",{"host","localhost:8001"},{"connection",{"connection","keep-alive"},{"cache-control",{"cache-control","no-cache"},{"access-control-request-method",{"access-control-request-method","GET"},{"access-control-request-headers",{"access-control-request-headers","accept, origin, x-requested-with"},{"accept",{"accept","*/*"},nil,{"accept-encoding",{"accept-encoding","gzip,deflate,sdch"},{"accept-charset",{"accept-charset","UTF-8,*;q=0.5"},nil,nil},{"accept-language",{"accept-language","en-US,en;q=0.8"},nil,nil}}},nil},nil},nil},nil},{"pragma",{"pragma","no-cache"},{"origin",{"origin","http://localhost:9000"},nil,nil},{"user-agent",{"user-agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31"},{"referer",{"referer","http://localhost:9000/"},nil,nil},nil}}}},<<>>},false,[],[],none}}],[{file,"/Users/codystebbins/Google Drive/code/rt_chat_server/src/controller/rt_chat_server_message_controller.erl"},{line,4}]},{boss_web_controller,execute_action,5,[{file,"src/boss/boss_web_controller.erl"},{line,836}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,543}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochicow_upgrade,upgrade,4,[{file,"src/mochicow_upgrade.erl"},{line,72}]},{cowboy_protocol,execute,4,[{file,"src/cowboy_protocol.erl"},{line,514}]}]}2013-05-13 23:50:26 =ERROR REPORT====
+OPTIONS /message [rt_chat_server] 500 45ms2013-05-13 23:54:38 =ERROR REPORT====
+{function_clause,[{rt_chat_server_message_controller,index,['OPTIONS',[],{rt_chat_server_message_controller,{simple_bridge_request_wrapper,mochiweb_request_bridge,{mochicow_request,#Port<0.16186>,'OPTIONS',"/message?callback=jsonp_callback",{1,1},{13,{"host",{"host","localhost:8001"},{"connection",{"connection","keep-alive"},{"cache-control",{"cache-control","max-age=0"},{"access-control-request-method",{"access-control-request-method","GET"},{"access-control-request-headers",{"access-control-request-headers","accept, origin, x-requested-with"},{"accept",{"accept","*/*"},nil,{"accept-encoding",{"accept-encoding","gzip,deflate,sdch"},{"accept-charset",{"accept-charset","UTF-8,*;q=0.5"},nil,nil},{"accept-language",{"accept-language","en-US,en;q=0.8"},nil,nil}}},nil},nil},nil},nil},{"pragma",{"pragma","no-cache"},{"origin",{"origin","http://localhost:9000"},nil,nil},{"user-agent",{"user-agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31"},{"referer",{"referer","http://localhost:9000/"},nil,nil},nil}}}},<<>>},false,[],[],none}}],[{file,"/Users/codystebbins/Google Drive/code/rt_chat_server/src/controller/rt_chat_server_message_controller.erl"},{line,4}]},{boss_web_controller,execute_action,5,[{file,"src/boss/boss_web_controller.erl"},{line,836}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,543}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochicow_upgrade,upgrade,4,[{file,"src/mochicow_upgrade.erl"},{line,72}]},{cowboy_protocol,execute,4,[{file,"src/cowboy_protocol.erl"},{line,514}]}]}2013-05-13 23:54:38 =ERROR REPORT====
+OPTIONS /message [rt_chat_server] 500 42ms2013-05-13 23:56:19 =ERROR REPORT====
+{badarg,[{erlang,'++',[undefined,[40,123,[34,"greeting",34],58,[34,<<"Hello, world!">>,34],125,41,59]],[]},{boss_web_controller,process_action_result,5,[{file,"src/boss/boss_web_controller.erl"},{line,960}]},{boss_web_controller,execute_action,5,[{file,"src/boss/boss_web_controller.erl"},{line,863}]},{boss_web_controller,process_dynamic_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,543}]},{boss_web_controller,process_request,5,[{file,"src/boss/boss_web_controller.erl"},{line,532}]},{timer,tc,3,[{file,"timer.erl"},{line,194}]},{boss_web_controller,build_dynamic_response,4,[{file,"src/boss/boss_web_controller.erl"},{line,462}]},{mochicow_upgrade,upgrade,4,[{file,"src/mochicow_upgrade.erl"},{line,72}]}]}2013-05-13 23:56:19 =ERROR REPORT====
+GET /message [rt_chat_server] 500 32ms
